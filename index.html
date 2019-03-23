@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GARDENING SOLUTION</title>
+  <meta charset="UTF-8">
+  <meta name="CSE299 Project" content="GARDENING SOLUTION">
+  <meta name="keywords" content="HTML,CSS,bootstrap,JavaScript">
+  <meta name="D I G I T O T A L" content="gardening solution">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<!-- font awesome icons library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="index.css">
+
+
+<body>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+<header>
+	 <div class="container">
+   <nav class="navbar navbar-inverse" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Gardening Solution</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+     <ul class="nav navbar-nav">
+        <li class="active"><a href="#" >Home</a></li>
+        <li><a href="" target="_blank">Problems and Solution</a></li>
+        <li> <a href="#pricing" target="_blank">Buy A Tree</a></li>
+      	<li><a href="#pricing" target="_blank">Medicine</a></li>
+        <li><a href="#pricing" target="_blank">Fartilizer</a></li>
+        <li><a href="#contact" target="_blank">Ask A Question</a></li>
+     	<li><a href="#aboutus" target="_blank">About Us</a></li>
+      <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="input-group">
+  <input type="text" class="form-control" placeholder="Search">
+  <div class="input-group-btn">
+    <button class="btn btn-default" type="submit">
+      <i class="glyphicon glyphicon-search"></i>
+    </button>
+  </div>
+  </div>
+  </form>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+</div>
+</header>
+
+<main>
+
+<div class="jumbotron text-center">
+  <h1>Gardening Solution</h1>
+  <p>We make gardening so easy</p>
+  <ul id="logSign" class="nav navbar-nav">
+    <li><a href="sign.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    <li><a href="log.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+  </ul>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>What is GARDENING SOLUTION?</h2><br>
+      <h4><p>Dhaka city has been named as the second least livable city in the world due to its pollution. The pollution is making a great impact on the peoples live.</p>
+        <p>World Bank report says, "every year around 100,000 people are dying in the urban areas for and a total of 250,000 heavy pollution. Majority of us are not following or in the process for maintain the environment.</p>
+        <p>If we are not going to heal the nature, the nature won’t heal us too.
+          <p>So, we tried to do something for the nature via this web-app. As you know by now, <b>Gardening solution</b> is a web application. By this website users can know about problems and solutions regarding gardening.</p>
+          <p> Users can know about trees by reading our articles. Also users can buy Fertilizers, Medicines and Trees for their garden via this website.</p>
+      <br><button href="#aboutus" class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-tree-deciduous logo slideanim"></span>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>Problem & Solution</h4>
+      <p>You can find here any kind of problem's solution about gardening. If you couldn't find your problem's solution,<br>contact us and we'll get back to you.</p>
+    </div>
+
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-grain logo-small"></span>
+      <h4>Buy A Tree</h4>
+      <p>You can buy trees for your garden and make it beautiful</p>
+    </div>
+
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-plus logo-small"></span>
+      <h4>Buy Medicine</h4>
+      <p>Buy required medicine and make your trees happy & healthy.</p>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>Fertilizer</h4>
+      <p>Feed your trees some nutrious food by giving them some natural fartilizer.</p>
+    </div>
+
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>Planing & Consultation</h4>
+      <p>You can plan about your garden and take advice from us.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricings</h2>
+    <h4>Choose a service you want for your garden<br> & <br> make your garden a little peace of green heaven.</h4>
+  </div>
+
+  <div id="btree" class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Buy A Tree</h1>
+        </div>
+
+        <div class="panel-body">
+        <button class="btn btn-lg">Fruits</button>
+       <button class="btn btn-lg">Flowers</button>
+         <button class="btn btn-lg">Orchids & Bushes</button>
+         <button class="btn btn-lg">Vegetables</button>
+         </div>
+        <div class="panel-footer">
+          <h3>Get 20% off by becoming a member</h3>
+           <button class="btn btn-lg"><a href="buyAtree.html" target="_blank"></a> Know More</button>
+
+        </div>
+      </div>
+    </div>
+
+  <div id="bmedicine" class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Medicine</h1>
+        </div>
+
+        <div class="panel-body">
+        <button class="btn btn-lg">Fruits</button>
+       <button class="btn btn-lg">Flowers</button>
+         <button class="btn btn-lg">Orchids & Bushes</button>
+         <button class="btn btn-lg">Vegetables</button>
+         </div>
+
+
+        <div class="panel-footer">
+          <h3>Get 20% off by becoming a member</h3>
+           <button class="btn btn-lg"><a href="Medicine.html" target="_blank"></a>Know More</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="bfertilizer" class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Fertilizer</h1>
+        </div>
+
+        <div class="panel-body">
+        <button class="btn btn-lg">Fruits</button>
+       <button class="btn btn-lg">Flowers</button>
+         <button class="btn btn-lg">Orchids & Bushes</button>
+         <button class="btn btn-lg">Vegetables</button>
+         </div>
+        <div class="panel-footer">
+          <h3>Get 20% off by becoming a member</h3>
+           <button class="btn btn-lg"><a href="BuyFartilizer.html" target="_blank"></a>Know More</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Bangladesh </p>
+      <p><span class="glyphicon glyphicon-phone"></span> +8801883165981</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> gardenings@gmail.com</p>
+
+  <!-- The social media icon bar -->
+  <div class="icon-bar">
+  <a href="www.facebook.com" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="www.twitter.com" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="www.google.com" target="_blank" class="google"><i class="fa fa-google"></i></a>
+  <a href="www.linkedin.com" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="www.youtube.com" target="_blank" class="youtube"><i class="fa fa-youtube"></i></a>
+  </div>
+
+    </div>
+
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer class="container-fluid text-center">
+  <a href="index.html" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Created for Junior Design Project(CSE299).
+    <br> Faculty: ZBZ.
+  </p>
+</footer>
+</div>
+</body>
+</html>
